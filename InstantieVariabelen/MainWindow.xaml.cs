@@ -20,9 +20,34 @@ namespace InstantieVariabelen
     /// </summary>
     public partial class MainWindow : Window
     {
+        private int count = 0;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            count = count + 1;
+            Label.Content = Convert.ToString(count);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            count = count - 1;
+            Label.Content = Convert.ToString(count);
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            count = count + 2;
+            Label.Content = Convert.ToString(count);
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            count = count - 2;
+            Label.Content = Convert.ToString(count);
         }
     }
 }
